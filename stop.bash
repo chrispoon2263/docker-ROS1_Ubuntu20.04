@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run Docker command to stop conatiner
-sudo docker stop <container name>
+# sudo docker stop <container name>
 
 # Run Docker Command to ls container
 sudo docker container ls -a
