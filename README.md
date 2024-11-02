@@ -13,5 +13,5 @@ This docker image works on a clean install of Ubuntu 20.04 VM using Parallels on
 3. Make sure to run to allow docker to use X11 from host machine
    - $ xhost -local:docker 
 4. Run multiple instances of that same container (current name of container)
-	$ sudo docker start <container-name> && sudo docker exec -it <container-name> /bin/bash
+   - $ sudo docker start <container-name> && sudo docker exec -it <container-name> /bin/bash
 
