@@ -2,10 +2,10 @@
 This docker image works on a clean install of Ubuntu 20.04 VM using Parallels on MacOS intel.
 
 1. Build the image
-	$ docker build -t ros_noetic_custom .   (<— there’s a dot here don’t forget)
+	- $ docker build -t ros_noetic_custom .   (<— there’s a dot here don’t forget)
 
 2. Create a new container with x11 display access ( only need to run once to buiild the container)
-	$ docker run -it \
+	- $ docker run -it \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   ros_noetic_custom
