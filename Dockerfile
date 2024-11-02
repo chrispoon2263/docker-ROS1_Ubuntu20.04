@@ -7,6 +7,7 @@ ENV LIBGL_ALWAYS_SOFTWARE=1
 # Install necessary libraries and Git
 RUN apt update && \
     apt install -y libgl1-mesa-glx libgl1-mesa-dri git && \
+    apt install -y qt5-default \
     rm -rf /var/lib/apt/lists/*
 
 # Add ROS setup command to .bashrc
