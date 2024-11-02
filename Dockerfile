@@ -14,7 +14,9 @@ RUN apt update && \
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 
 # Clone the repository into the home directory
-RUN git clone https://github.com/OSUrobotics/ROB456.git /home/ROB456
+# RUN git clone https://github.com/OSUrobotics/ROB456.git /home/ROB456
+# Create the directory /home/ROB456
+RUN mkdir -p /home/ROB456
 
 # Set the working directory to home
 WORKDIR /home
