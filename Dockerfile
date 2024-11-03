@@ -19,7 +19,7 @@ RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 RUN mkdir -p /home/ROB456
 
 # Set the working directory to home
-WORKDIR /home
+WORKDIR /home/ROB456/Shell_code_ROS
 
 # Default command to run a shell, sourcing .bashrc when starting a new shell
-CMD ["bash", "-c", "export DISPLAY=$DISPLAY && source ~/.bashrc && exec bash"]
+CMD ["bash", "-c", "export DISPLAY=$DISPLAY && source ~/.bashrc && source devel/setup.bash && exec bash"]

@@ -10,4 +10,4 @@ sudo docker container ls -a
 #echo $container_id
 
 # Run Docker command
-sudo docker start $container_id  && sudo docker exec -it $container_id  /bin/bash 
+sudo docker start $container_id  && sudo docker exec -it $container_id /bin/bash 
