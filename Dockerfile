@@ -12,6 +12,7 @@ RUN apt update && \
 
 # Add ROS setup command to .bashrc
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+RUN echo "source /home/ROB456/Shell_code_ROS/devel/setup.bash" >> ~/.bashrc
 
 # Clone the repository into the home directory
 # RUN git clone https://github.com/OSUrobotics/ROB456.git /home/ROB456
