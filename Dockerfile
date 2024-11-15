@@ -23,4 +23,4 @@ RUN mkdir -p /home/ROB456
 WORKDIR /home/ROB456/Shell_code_ROS
 
 # Default command to run a shell, sourcing .bashrc when starting a new shell
-CMD ["bash", "-c", "export DISPLAY=$DISPLAY && source ~/.bashrc && source /home/ROB456/Shell_code_ROS/devel/setup.bash && exec bash"]
+CMD ["bash", "-c", "export DISPLAY=$DISPLAY && source ~/.bashrc && source /home/ROB456/Shell_code_ROS/devel/setup.bash && chmod a+x /home/ROB456/Shell_code_ROS/src/lab2/src/send_points.py && exec bash"]
