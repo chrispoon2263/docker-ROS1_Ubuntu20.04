@@ -4,13 +4,18 @@ FROM osrf/ros:noetic-desktop-full
 # Set environment variables for software rendering
 ENV LIBGL_ALWAYS_SOFTWARE=1
 
-# Install necessary libraries and Git
+# Install necessary libraries, Git, and gmapping
 RUN apt update && \
-    apt install -y libgl1-mesa-glx libgl1-mesa-dri git vim && \
-    apt install -y qt5-default && \
+    apt install -y libgl1-mesa-glx libgl1-mesa-dri qt5-default git vim ros-noetic-gmapping && \
     rm -rf /var/lib/apt/lists/*
 
-# Add ROS setup command to .bashrc
+# Set environment variable for XDG_RUNTIME_DIR
+ENV XDG_RUNTIME_DIR=/tmp/runtime-ros
+
+# Create XDG_RUNTIME_DIR at runtime and set correct permissions
+RUN mkdir -p /tmp/runtime-ros && chmod 700 /tmp/runtime-ros
+
+# Add ROS setup commands to .bashrc
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 RUN echo "source /home/ROB456/Shell_code_ROS/devel/setup.bash" >> ~/.bashrc
 
@@ -22,5 +27,5 @@ RUN mkdir -p /home/ROB456
 # Set the working directory to home
 WORKDIR /home/ROB456/Shell_code_ROS
 
-# Default command to run a shell, sourcing .bashrc when starting a new shell
-CMD ["bash", "-c", "export DISPLAY=$DISPLAY && source ~/.bashrc && source /home/ROB456/Shell_code_ROS/devel/setup.bash && chmod a+x /home/ROB456/Shell_code_ROS/src/lab2/src/send_points.py && exec bash"]
+# Ensure permissions and source environment before starting a shell
+CMD ["bash", "-c", "export DISPLAY=$DISPLAY && source ~/.bashrc && exec bash"]
