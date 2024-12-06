@@ -6,7 +6,7 @@ ENV LIBGL_ALWAYS_SOFTWARE=1
 
 # Install necessary libraries, Git, and gmapping
 RUN apt update && \
-    apt install -y libgl1-mesa-glx libgl1-mesa-dri qt5-default git vim ros-noetic-gmapping python3 python3-pip && \
+    apt install -y libgl1-mesa-glx libgl1-mesa-dri qt5-default git vim ros-noetic-gmapping python3 python3-pip python3-tk && \
     python3 -m pip install --upgrade pip && \
     python3 -m pip install imageio && \
     rm -rf /var/lib/apt/lists/*
