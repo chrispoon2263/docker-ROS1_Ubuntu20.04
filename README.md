@@ -18,3 +18,4 @@ This docker image works on a clean install of Ubuntu 20.04 VM using Parallels on
 	- $ sudo docker container ls -a 
 	- $ sudo docker start <container-name> && sudo docker exec -it <container-name> /bin/bash
 
+![alt text](https://github.com/chrispoon2263/docker-ROS1_Ubuntu20.04/blob/main/ROS.img?raw=true)
