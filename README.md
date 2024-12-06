@@ -1,5 +1,5 @@
+This Dockerfile will install the Robert Operating System on Ubuntu 20.04.
 # docker-ROS1_Ubuntu20.04
-This docker image works on a clean install of Ubuntu 20.04 VM using Parallels on MacOS intel.
 
 1. Build the image
 	- $ sudo docker build -t ros_noetic_custom .   (<— there’s a dot here don’t forget)
