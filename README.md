@@ -19,5 +19,5 @@ This Dockerfile will install the Robert Operating System on Ubuntu 20.04.
 	- $ sudo docker start <container-name> && sudo docker exec -it <container-name> /bin/bash
 
 ## ROS1 inside of container: 
-![alt text](https://github.com/chrispoon2263/docker-ROS1_Ubuntu20.04/blob/main/ROS.png?raw=true)
+![alt text](images/ROS.png)
 
